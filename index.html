@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>jQuery Template</title>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <script>
-        $(function(){
-            
-        });
-    </script>
-  </head>
-  <body>
-  Color:<input id="color"><br>
-  Name:<input id="name"><br>
-  The Year:<input id="date"><br>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>html() and val() Madlib</title>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
+    $(function() {
+
+      $('button').click(function() {
+        // get the inputs from the user
+        var name = $("#name").val();
+        var color = $("#color").val();
+        var date = $("#date").val();
+
+        var banner = "Certificate of Achievement " +
+          "Presented to " + name + " on " + date + ".";
+        
+        console.log(banner);
+        $('p').html(banner);
+        $('p').css("color",color);
+ });
+
+    });
+  </script>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+
+  <div>
+  Name: <input id="name"><br> 
+  Color: <input id="color"><br> 
+  Date: <input id="date"><br>
   <button>Generate Banner</button>
-  
-  <div id="banner">
-    <h1>Certificate of Achievement</h1>
   </div>
-  </body>
+
+  <p></p>
+
+</body>
+
 </html>
