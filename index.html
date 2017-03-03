@@ -12,6 +12,7 @@
         var name = $("#name").val();
         var color = $("#color").val();
         var date = $("#date").val();
+        var bckgndcolor=$("#bckgnd").val();
 
         var banner = "Certificate of Achievement " +
           "Presented to " + name + " on " + date + ".";
@@ -19,6 +20,7 @@
         console.log(banner);
         $('p').html(banner);
         $('p').css("color",color);
+        $('p').css("background-color",bckgndcolor);
         
         
  });
@@ -34,6 +36,7 @@
   Name: <input id="name"><br> 
   Color: <input id="color"><br> 
   Date: <input id="date"><br>
+  Background Color:<input id="bckgnd"><br>
   <button>Generate Banner</button>
   </div>
 
